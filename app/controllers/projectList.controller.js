@@ -25,10 +25,10 @@ exports.findAll = (req, res) => {
   //       });
   //   });
 
-
+   //
     ProjectList.find()
    .then(projectNames => {
-       console.log(JSON.stringify(projectNames))
+       // console.log(JSON.stringify(projectNames))
        res.send(projectNames);
    }).catch(err => {
        res.status(500).send({
