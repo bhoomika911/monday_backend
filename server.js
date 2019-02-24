@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // parse requests of content-type - application/json
 app.use(bodyParser.json())
 
-// require('./app/routes/note.routes.js')(app);
+require('./app/routes/projectList.routes.js')(app);
 // require('./app/routes/register.routes.js')(app);
 // require('./app/routes/logIn.routes.js')(app);
 // require('./app/routes/update.routes.js')(app);
@@ -32,7 +32,7 @@ mongoose.connect(dbConfig.url, {
 
 // define a simple route
 app.get('/', (req, res) => {
-    res.json({"message": "Welcome to EasyNotes application. Take notes quickly. Organize and keep track of all your notes."});
+    res.json({"message": "Welcome to Monday application."});
 });
 
 // listen for requests
